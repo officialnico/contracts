@@ -114,7 +114,7 @@ module.exports = {
             gasPrice: utils.toWei('10', 'mwei')
         },
         matic: {
-            provider: () => new HDWalletProvider(process.env.PK, `https://rpc-mainnet.matic.network`),
+            provider: () => new HDWalletProvider(MNEMONIC, `https://rpc-mainnet.maticvigil.com`),
             network_id: 137,
             gasPrice: 1000000000,
             confirmations: 2,
