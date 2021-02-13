@@ -112,7 +112,15 @@ module.exports = {
             from: '0xba3e0ec852dc24ca7f454ea545d40b1462501711',
             gas: 6 * 1000000,
             gasPrice: utils.toWei('10', 'mwei')
-        }
+        },
+        matic: {
+            provider: () => new HDWalletProvider(process.env.PK, `https://rpc-mainnet.matic.network`),
+            network_id: 137,
+            gasPrice: 1000000000,
+            confirmations: 2,
+            timeoutBlocks: 200,
+            skipDryRun: true
+         }
     },
     plugins: ['solidity-coverage'],
     // Set default mocha options here, use special reporters etc.
